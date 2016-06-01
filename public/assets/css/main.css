@@ -1,0 +1,28 @@
+body {
+  color: #2d3339;
+  font-family: "Varela Round";
+  text-align: center;
+  background: #edeff0;
+  font-size: 16px; }
+
+  div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: 100px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
