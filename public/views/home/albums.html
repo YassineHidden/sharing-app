@@ -1,6 +1,5 @@
 		<div class="container">
-         <div style="width:380px; margin:0 auto" class="row " ng-repeat='album in albums' ng-if="$index%2==0" >
-        
+         <div style="width:380px; margin:0 auto" class="row " ng-repeat="album in albums | orderBy:'name'"  ng-if="$index%2==0" >
 			<div class="img"  >
 			  <a target="_blank" >
 			    <img src="{{albums[$index].photos.data[0].picture}}" alt="No Photos" width="300" height="200" ng-click="albumPhotos($index)">
