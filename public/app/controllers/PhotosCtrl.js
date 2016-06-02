@@ -6,7 +6,7 @@ frontEnd.controller('PhotosCtrl',function($scope,User){
      $scope.creds          = {
      access_key:'YOUR-KEY',
      secret_key:'YOUR-SECRET',
-     bucket:'BucketName'
+     bucket:'Bucket'
   };
   $scope.loadImage=function(index){
   	if(!$scope.photos[index].file){

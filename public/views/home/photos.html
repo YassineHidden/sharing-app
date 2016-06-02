@@ -1,5 +1,7 @@
-		<div class="container">
-         
+		<div style="position:absolute;top:0px;width:100%"class="panel-footer">
+			<a class="btn btn-primary btn-block btn-lg" ng-click="upload()">Upload</a>
+		</div>
+		<div class="container">         
 			<div class="img" ng-repeat='photo in photos' ng-init="checked=false;uploadProgress=0;" >
 			  <a target="_blank" href="#">
 			    <img src="{{photo.picture}}" alt="No Photos" width="300" height="200" ">
@@ -13,6 +15,4 @@
 			  </div>
 			</div>
     	</div>
-    	<div style="position:absolute;bottom:0px;width:100%"class="panel-footer">
-			<a class="btn btn-primary btn-block btn-lg" ng-click="upload()">Upload</a>
-		</div>
+    	

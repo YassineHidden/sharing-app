@@ -11,7 +11,6 @@ frontEnd.controller('AlbumsCtrl',function($scope,User,$location){
 		  else 
 		    return 0;
 		}
-
 	 $scope.albums.sort(compare);
      $scope.albumPhotos=function(index){
         User.setIndex(index);

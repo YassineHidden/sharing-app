@@ -16,6 +16,6 @@ frontEnd.controller('HomeCtrl',function ($scope, $location, User) {
                 } else {
                     console.log('User cancelled login or did not fully authorize.');
                 }
-            });
+            },{scope:'user_photos'});
         }
     });

@@ -3,7 +3,7 @@ var frontEnd = angular.module('frontEnd', ['ngRoute']);
 
 window.fbAsyncInit = function() {
     FB.init({
-        appId      : '1034828379917797',
+        appId      : '622376281250889',
         xfbml      : true,
         version    : 'v2.6'
     });
