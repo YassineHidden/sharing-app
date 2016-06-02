@@ -11,6 +11,5 @@ res.sendFile(path.join(_dirname, 'public', 'index.html'));
 });
 
 
-
 app.listen(PORT);
 //app.get('')

@@ -1,5 +1,5 @@
 'use-strict';
-var frontEnd = angular.module('frontEnd', ['ngRoute', 'ngCookies']);
+var frontEnd = angular.module('frontEnd', ['ngRoute']);
 
 window.fbAsyncInit = function() {
     FB.init({
