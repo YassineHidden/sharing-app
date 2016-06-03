@@ -1,14 +1,16 @@
 		<div class="container">
-         <div style="width:380px; margin:0 auto" class="row " ng-repeat="album in albums | orderBy:'name'"  ng-if="$index%2==0" >
-			<div class="img"  >
+         <div style="width:380px; margin:0 auto" class="row " ng-repeat="album in albums"  ng-if="$index%2==0" >
+			<div class="img" ng-if="$index<albums.length">
 			  <a target="_blank" >
-			    <img src="{{albums[$index].photos.data[0].pictureRealSize}}" alt="No Photos" width="300" height="200" ng-click="albumPhotos($index)">
+			   <img ng-if="!albums[$index].photos" alt="No Photos" width="300" height="200">
+			    <img ng-if="albums[$index].photos" src="{{albums[$index].photos.data[0].pictureRealSize}}" alt="No Photos" width="300" height="200" ng-click="albumPhotos($index)">
 			  </a>
 			  <div class="desc">{{albums[$index].name}}</div>
 			</div>
 			<div class="img"  ng-if="$index+1<albums.length">
 			  <a target="_blank" >
-			    <img src="{{albums[$index+1].photos.data[0].pictureRealSize}}" alt="No Photos" width="300" height="200" ng-click="albumPhotos($index+1)">
+			  <img ng-if="!albums[$index+1].photos" alt="No Photos" width="300" height="200">
+			    <img ng-if="albums[$index+1].photos" src="{{albums[$index+1].photos.data[0].pictureRealSize}}" alt="No Photos" width="300" height="200" ng-click="albumPhotos($index+1)">
 			  </a>
 			  <div class="desc">{{albums[$index+1].name}}</div>
 			</div>              

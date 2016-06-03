@@ -7,7 +7,6 @@ frontEnd.controller('HomeCtrl',function ($scope, $location, User) {
                     FB.api('/me', function (response) {
                         /*setting the user object*/
                         User.setUserObj(response);
-                        console.log(response);
                         /*get the access token*/
                         var FBAccessToken = FB.getAuthResponse().accessToken;
                         User.setAccessToken(FBAccessToken);
