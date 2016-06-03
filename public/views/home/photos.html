@@ -4,7 +4,7 @@
 		<div class="container">         
 			<div class="img" ng-repeat='photo in photos' ng-init="checked=false;uploadProgress=0;" >
 			  <a target="_blank" href="#">
-			    <img src="{{photo.picture}}" alt="No Photos" width="300" height="200" ">
+			    <img src="{{photo.pictureRealSize}}" alt="No Photos" width="300" height="200" ">
 			  </a>
 			  <div class="desc"><input type="checkbox" ng-click="loadImage($index)" ng-model="photo.checked">
 			  <div ng-show="photo.checked" class="progress">

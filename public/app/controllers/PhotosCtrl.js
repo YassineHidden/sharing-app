@@ -8,11 +8,30 @@ frontEnd.controller('PhotosCtrl',function($scope,User){
      secret_key:'YOUR-SECRET',
      bucket:'Bucket'
   };
+  console.log($scope.photos);
+  var indexRealSize=0;
+  var realSizePhotos=function(){
+    if(indexRealSize<$scope.photos.length){
+      FB.api(
+        '/'+$scope.photos[indexRealSize].id+'/picture',
+          'GET',
+          {"width":"500","height":"500"},
+          function(response) {
+              // Insert your code here
+              $scope.photos[indexRealSize].pictureRealSize=response.data.url;
+              indexRealSize++;
+              realSizePhotos();
+              $scope.$digest();
+          }
+      );
+    }
+  }
+  realSizePhotos();
   $scope.loadImage=function(index){
   	if(!$scope.photos[index].file){
 	var file = null;
     var xhr = new XMLHttpRequest(); 
-    xhr.open("GET", $scope.photos[index].picture); 
+    xhr.open("GET", $scope.photos[index].pictureRealSize); 
     xhr.responseType = "blob";//force the HTTP response, response-type header to be blob
     xhr.onload = function() 
     {
